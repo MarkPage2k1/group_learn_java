@@ -1,10 +1,14 @@
 # bai tap 1
-/bt1/javacored7
+java/bt1/javacored7
 
 # bai tap 2
-*/.vscode
-*/bin
-*/README.md
+java/bt2/JavaCoreKiemTra1
+java/bt2/Java.rar
+
+# all
+**/.vscode
+**/bin
+*.xls
 
 # Game bai
-/gamebai/README.md
+java/gamebai/README.md

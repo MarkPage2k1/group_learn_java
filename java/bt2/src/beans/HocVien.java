@@ -55,4 +55,10 @@ public class HocVien {
             + "\t\tDia chi: " + this.diaChi 
             + "\t\tTuoi: " + this.tuoi;
     }
+
+    public String[] toStringArray() {
+        String arr[] = { "%1$-5s %2$-20s %3$-20s %4$-5s", this.maHV, this.hoTen, this.diaChi,
+				Integer.toString(this.tuoi) };
+		return arr;
+    }
 }

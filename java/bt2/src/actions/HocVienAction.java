@@ -41,7 +41,7 @@ public class HocVienAction {
     // Ham kiem tra hoc vien co trong db hay chua, neu co tra ve hoc vien do, neu khong tra ve null
 	public static HocVien checkHocVien(ArrayList<HocVien> dsHocVien, String id){
         for (HocVien hocVien : dsHocVien) {
-            if (hocVien.getMaHV().toLowerCase().equals(id.toLowerCase())){
+            if (hocVien.getMaHV().equalsIgnoreCase(id)){
                 return hocVien;
             }
         }
@@ -94,9 +94,12 @@ public class HocVienAction {
 	}
 
     public static void displayInfor(ArrayList<HocVien> listHocVien){
+        System.out.printf("%1$-5s %2$-20s %3$-20s %4$-5s", "MaHV", "Ho va ten", "Dia chi", "Tuoi");
         if (listHocVien.size() > 0) {
             for (HocVien hocVien : listHocVien) {
-                System.out.println(hocVien);
+                String arrTS[] = hocVien.toStringArray();
+                System.out.printf(arrTS[0], arrTS[1], arrTS[2], arrTS[3], arrTS[4]);
+                System.out.println();
             }
         } else {
             System.out.println("Danh sach trong!");
@@ -109,7 +112,10 @@ public class HocVienAction {
         HocVien hocVien = checkHocVien(listHocVien, id);
 
         if (hocVien != null){
-            System.out.println(hocVien);
+            System.out.printf("%1$-5s %2$-20s %3$-20s %4$-5s", "MaHV", "Ho va ten", "Dia chi", "Tuoi");
+            String arrTS[] = hocVien.toStringArray();
+            System.out.printf(arrTS[0], arrTS[1], arrTS[2], arrTS[3], arrTS[4]);
+			System.out.println();
         } else {
             System.out.println("Khong tim thay!");
         }
