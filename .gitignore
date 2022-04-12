@@ -9,6 +9,8 @@ java/bt2/Java.rar
 **/.vscode
 **/bin
 *.xls
+*.pdf
+*.rar
 
 # Game bai
 java/gamebai/README.md
